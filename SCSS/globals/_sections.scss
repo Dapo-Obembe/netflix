@@ -69,6 +69,7 @@
     .section3-desc,
     .section4-desc {
       font-size: 0.9rem;
+      text-align: center;
     }
   }
   /* Animation Section */
@@ -202,7 +203,7 @@
     padding: 1rem 1.25rem;
     background-color: $Red;
     font-weight: 600;
-    font-size: clamp(1rem, 0.25rem + 2vw, 2.125rem);
+    font-size: clamp(1rem, 0.25rem + 1vw, 2rem);
     color: #fff;
     text-transform: uppercase;
     border-radius: 0.5rem;
@@ -280,6 +281,10 @@
   }
 
   /* FAQS QUESTION */
+  .section5-title {
+    width: 100%;
+  }
+
   .accordion {
     background-color: $Background-color;
     display: flex;
@@ -289,6 +294,10 @@
     margin: 1.25rem auto;
   }
   @media screen and (max-width: 768px) {
+    .section5-title {
+      width: 100%;
+      font-size: clamp(1.5rem, 0.25rem + 1vw, 2rem);
+    }
     .accordion {
       width: 100%;
     }
