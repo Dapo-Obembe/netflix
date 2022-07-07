@@ -11,7 +11,7 @@
   justify-content: space-between;
   align-items: center;
 
-  &_logo {
+  .header_logo {
     color: $Red;
     font-size: 45px;
     font-weight: $LogoFont-weight;
@@ -24,6 +24,13 @@
     color: $Red;
   }
 
+  /* RESIZE LOGO TEXT ON MOBILE */
+  @media screen and (max-width: 768px) {
+    .header_logo {
+      font-size: 30px;
+    }
+  }
+
   &_button {
     background-color: $Red;
     color: #fff;
@@ -34,5 +41,11 @@
   }
   &_button:hover {
     color: #fff;
+  }
+
+  @media screen and (max-width: 768px) {
+    &_button {
+      padding: 0.125rem 0.5rem;
+    }
   }
 }

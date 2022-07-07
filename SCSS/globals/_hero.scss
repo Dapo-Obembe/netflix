@@ -21,12 +21,24 @@
   margin-top: 1.25rem;
 
   .hero_title {
-    font-size: clamp(2rem, 0.5rem + 5vw, 4rem);
+    font-size: clamp(2rem, 0.5rem + 3vw, 4rem);
     line-height: 1.1;
     margin-bottom: 0.8rem;
     max-width: 680px;
   }
 
+  @media screen and (max-width: 768px) {
+    .hero_title {
+      font-size: 2rem;
+      line-height: 1.1;
+      margin-bottom: 0.8rem;
+      max-width: 700px;
+      font-weight: 800;
+    }
+    .hero-desc {
+      font-size: 1.2rem;
+    }
+  }
   .hero-create {
     max-width: 900px;
     margin: 0 auto;
@@ -47,11 +59,17 @@
       grid-template-columns: 1fr;
       gap: 0.5rem;
     }
+    .hero-create {
+      font-size: 1.2rem;
+      line-height: 1.1;
+      margin-top: 1.25rem;
+    }
   }
   .hero-create-form input {
     min-height: 2rem;
     max-width: 100%;
     padding: 1.25rem 0.5rem;
+    background-color: #fff;
   }
   .hero-create-form button {
     min-height: 2rem;
@@ -63,8 +81,17 @@
     font-weight: 600;
   }
   @media only screen and (max-width: 640px) {
+    .how-to-create-form input {
+      min-height: 1rem;
+      width: 100%;
+      padding: 0.5rem 0.8rem;
+      background-color: #fff;
+      border: none;
+    }
     .hero-create-form button {
-      padding: 0.25rem 0;
+      padding: 0.35rem 0;
+      width: 40%;
+      margin: 0 auto;
     }
   }
 }

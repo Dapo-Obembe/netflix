@@ -54,6 +54,23 @@
     line-height: 1.1;
     margin-bottom: 0.525rem;
   }
+  /* RESIZING SECTION TITLES AND SECRIPTION ON MOBILE */
+  @media screen and (max-width: 768px) {
+    .section-title,
+    .section2-title,
+    .section3-title,
+    .section4-title,
+    .section5-title {
+      font-size: 2rem;
+      text-align: center;
+    }
+    .section-desc,
+    .section2-desc,
+    .section3-desc,
+    .section4-desc {
+      font-size: 0.9rem;
+    }
+  }
   /* Animation Section */
   .vid-animation {
     height: 400px;
@@ -117,7 +134,7 @@
   /* Styling for the box over the Stranger Things Image */
   .overlay-box {
     height: 100px;
-    max-width: 300px;
+    max-width: 400px;
     border: 2px solid $BorderBottomColor;
     background-color: $Background-color;
     border-radius: 0.5rem;
@@ -132,6 +149,18 @@
   @media screen and (max-width: 768px) {
     .overlay-box {
       margin-left: 60px;
+      height: 90px;
+      max-width: 300px;
+    }
+    .overlay-texts p:nth-child(1) {
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.8rem;
+      margin: 0;
+    }
+    .overlay-texts p:nth-child(2) {
+      color: $Red !important;
+      font-size: 0.6rem;
     }
   }
   .boxshot img {
@@ -217,6 +246,7 @@
     min-height: 2rem;
     max-width: 100%;
     padding: 1.25rem 0.5rem;
+    background-color: #fff;
   }
   .section5-create-form button {
     min-height: 2rem;
@@ -228,8 +258,16 @@
     font-weight: 600;
   }
   @media only screen and (max-width: 640px) {
+    .section5-create-form input {
+      min-height: 1.5rem;
+      width: 100%;
+      padding: 1rem 0.5rem;
+      background-color: #fff;
+    }
     .section5-create-form button {
-      padding: 0.25rem 0;
+      padding: 0.35rem 0;
+      width: 40%;
+      margin: 0 auto;
     }
   }
 
@@ -249,6 +287,11 @@
     gap: 0.5rem;
     max-width: 700px;
     margin: 1.25rem auto;
+  }
+  @media screen and (max-width: 768px) {
+    .accordion {
+      width: 100%;
+    }
   }
   .accordion-item {
     background-color: $BorderBottomColor;
