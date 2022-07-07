@@ -1,0 +1,36 @@
+@use "boilerplate" as *;
+
+.footer {
+  background-color: $Background-color;
+  min-height: 300px;
+  max-width: 100%;
+  display: grid;
+  place-items: center;
+  border-top: 0.5rem solid $BorderBottomColor;
+  padding: 1.25rem 0;
+
+  .footer-contents {
+    max-width: 60%;
+    margin: 0 auto;
+  }
+  @media screen and (max-width: 576px) {
+    .footer-contents {
+      display: grid;
+      grid-template-columns: 100%;
+      place-items: center;
+      text-align: center;
+    }
+  }
+  ul li {
+    list-style: none;
+    font-size: 0.8rem;
+  }
+  ul li a {
+    color: rgb(148, 147, 147);
+  }
+
+  .copyright {
+    margin-top: 2rem;
+    color: #d2d2d2;
+  }
+}

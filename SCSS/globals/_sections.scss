@@ -1,0 +1,276 @@
+@use "boilerplate" as *;
+
+/* All Sections Defualt settings */
+
+.section-one,
+.section2,
+.section3,
+.section4,
+.section5 {
+  min-height: 400px;
+  max-height: 100%;
+  background-color: $Background-color;
+  max-width: 100%;
+  padding: 1.25rem 10%;
+  border-top: 0.5rem solid $BorderBottomColor;
+
+  /* SECTION ONE */
+  .section-contents,
+  .section2-contents,
+  .section4-contents {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .section-col_0ne {
+    max-width: 80%;
+  }
+  @media screen and (max-width: 800px) {
+    .section-col_0ne,
+    .section2-col_0ne {
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+  .section-title,
+  .section2-title,
+  .section3-title,
+  .section4-title,
+  .section5-title {
+    font-size: clamp(2rem, 0.5rem + 5vw, 3.125rem);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    font-weight: $HeadingFont-Weight;
+  }
+  .section-desc,
+  .section2-desc,
+  .section3-desc,
+  .section4-desc {
+    font-size: clamp(1rem, 0.5rem + 1vw, 2.125rem);
+    line-height: 1.1;
+    margin-bottom: 0.525rem;
+  }
+  /* Animation Section */
+  .vid-animation {
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .vid-animation img {
+    width: 485px;
+    height: 370px;
+    margin: 0 auto;
+    z-index: 10;
+  }
+  .vid-animation video {
+    position: relative;
+    width: 445px;
+    height: 205px;
+    margin: 0 auto;
+    margin-top: -295px;
+    z-index: 0;
+  }
+}
+
+/* SECTION TWO STYLINGS */
+.section2 {
+  /* See section One */
+
+  .section2-contents {
+    width: 100%;
+  }
+
+  .section2-col_0ne {
+    max-width: 60%;
+  }
+
+  /* Switch the section two columns mobile margin */
+  @media screen and (max-width: 768px) {
+    .section2-contents {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    .section2-col_0ne {
+      margin: 0 20%;
+    }
+  }
+
+  /* Animation Part */
+  .image-animation {
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .image-animation img {
+    width: 485px;
+    height: 350px;
+  }
+
+  /* Styling for the box over the Stranger Things Image */
+  .overlay-box {
+    height: 100px;
+    max-width: 300px;
+    border: 2px solid $BorderBottomColor;
+    background-color: $Background-color;
+    border-radius: 0.5rem;
+    margin-top: -120px;
+    margin-left: 90px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  /* Center Overlay-Box on Mobile */
+  @media screen and (max-width: 768px) {
+    .overlay-box {
+      margin-left: 60px;
+    }
+  }
+  .boxshot img {
+    width: 60px;
+    height: 80px;
+  }
+  .overlay-texts p:nth-child(1) {
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+    margin: 0;
+  }
+  .overlay-texts p:nth-child(2) {
+    color: $Red !important;
+    font-size: 0.9rem;
+  }
+}
+
+/* SECTION THREE STYLINGS */
+
+.section3 {
+  min-height: 300px;
+
+  .section3-contents {
+    min-height: inherit;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .section3-desc {
+    margin-bottom: 1rem;
+  }
+  .getStarted {
+    min-height: 90px;
+    padding: 1rem 1.25rem;
+    background-color: $Red;
+    font-weight: 600;
+    font-size: clamp(1rem, 0.25rem + 2vw, 2.125rem);
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 0.5rem;
+    border: none;
+  }
+}
+/* SECTION FIVE STYLING */
+
+.section5 {
+  .section5-contents {
+    width: 100%;
+    display: grid;
+    place-items: center;
+  }
+  .section5-create {
+    max-width: 700px;
+    margin: 0 auto;
+    margin-bottom: 1.25rem;
+  }
+
+  .section5-create p {
+    max-width: 800px;
+    font-size: clamp(1rem, 0.5rem + 1vw, 2rem);
+    margin-top: 2rem;
+  }
+
+  .section5-create-form {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    gap: 0;
+    max-width: 100%;
+  }
+  @media only screen and (max-width: 640px) {
+    .section5-create-form {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
+    }
+  }
+  .section5-create-form input {
+    min-height: 2rem;
+    max-width: 100%;
+    padding: 1.25rem 0.5rem;
+  }
+  .section5-create-form button {
+    min-height: 2rem;
+    background-color: $Red;
+    color: #fff;
+    padding: 0.8rem 1.25rem;
+    border: none;
+    font-size: clamp(1rem, 0.3rem + 2vw, 1.25rem);
+    font-weight: 600;
+  }
+  @media only screen and (max-width: 640px) {
+    .section5-create-form button {
+      padding: 0.25rem 0;
+    }
+  }
+
+  .section5-contact {
+    margin-top: 1.25rem !important;
+    color: rgb(185, 184, 184);
+  }
+  .section5-contact:hover {
+    text-decoration: underline;
+  }
+
+  /* FAQS QUESTION */
+  .accordion {
+    background-color: $Background-color;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 700px;
+    margin: 1.25rem auto;
+  }
+  .accordion-item {
+    background-color: $BorderBottomColor;
+    color: #fff;
+    font-weight: 600;
+    font-size: clamp(1rem, 0.3rem + 3vw, 1.25rem);
+    border: none;
+  }
+
+  .accordion-header button {
+    background-color: $BorderBottomColor;
+    color: #fff !important;
+    font-weight: 600;
+    font-size: clamp(1rem, 0.3rem + 3vw, 1.25rem);
+    gap: 0.5rem;
+  }
+
+  .accordion-button::after {
+    // background-image: 2b;
+    background-color: #fff;
+    border: 0px solid;
+    border-radius: 50%;
+    padding: 8px;
+  }
+}
